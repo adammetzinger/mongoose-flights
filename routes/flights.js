@@ -1,0 +1,13 @@
+var express = require('express');
+var router = express.Router();
+const flightsCtrl = require('../controllers/flights') 
+
+// all paths start with '/flights'
+/* GET users listing. */
+router.get('/', flightsCtrl.index);
+//
+router.get('/new', flightsCtrl.new);
+// post /flights (create action)
+router.post('/', flightsCtrl.create);
+
+module.exports = router;
