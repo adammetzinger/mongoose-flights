@@ -3,7 +3,7 @@ const Schema = mongoose.Schema;
 
 const destinationSchema = new Schema({
     airport: { type: String },
-    arival: { type: Date },
+    arrival: { type: Date },
 }, {
     timestamps: true
 })
@@ -15,8 +15,8 @@ const flightSchema = new Schema({
     departs: { type: String, default: function(){
        return new Date(new Date().setFullYear(new Date().getFullYear() + 1))
     },
-    destination: [destinationSchema],
 },
+    destinations: [destinationSchema],
 }, {
     timestamps: true
 });

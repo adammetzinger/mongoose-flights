@@ -6,11 +6,11 @@ module.exports = {
 
 async function create(req, res) {
     const flight = await Flight.findById(req.params.id);
-    flight.destination.push(req.body)
+    flight.destinations.push(req.body);
     try {
         await flight.save();
     } catch (err) {
-        console.log(err)
+        console.log(err);
     }
-    res.redirect(`/flight/${flight._id}`)
+    res.redirect(`/flights/${flight._id}`)
 }
