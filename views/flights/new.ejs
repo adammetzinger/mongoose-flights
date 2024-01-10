@@ -3,12 +3,23 @@
     <label>Airline:
         <input type="text" name="airline">
     </label><br>
-    <label>Airport:
-        <input type="text" name="airport">
-    </label><br>
+    <label>Airport:</label>
+    <select name="airport">
+        <option value="SEA">SEA</option>
+        <option value="DFW">DFW</option>
+        <option value="DEN">DEN</option>
+        <option value="LAX">LAX</option>
+        <option value="JFK">JFK</option>
+        <option value="SFO">SFO</option>
+    </select>
+    <br>
     <label>Flight Number:
         <input type="text" name="flightNo">
     </label><br>
+    <label>Destination:
+        <input type="text" placeholder="airport arival">
+        <input type="datetime-local" value="2018-06-12T19:30">
+    </label>
     <button type="submit">Add Flight</button>
 </form>
 <p>
