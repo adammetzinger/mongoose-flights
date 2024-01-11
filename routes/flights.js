@@ -1,7 +1,6 @@
 var express = require('express');
 var router = express.Router();
 const flightsCtrl = require('../controllers/flights'); 
-const { get } = require('mongoose');
 
 // all paths start with '/flights'
 /* GET users listing. */
